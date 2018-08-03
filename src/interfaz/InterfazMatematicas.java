@@ -1,8 +1,6 @@
 package interfaz;
 
 import java.awt.BorderLayout;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -19,7 +17,7 @@ public class InterfazMatematicas extends JFrame{
 	
 	public InterfazMatematicas(){
 		setLayout(new BorderLayout());
-		setTitle("Matemáticas Didacticas");
+		setTitle("MatemÃ¡ticas Didacticas");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
 		mat = new Matematica();
@@ -51,6 +49,7 @@ public class InterfazMatematicas extends JFrame{
 		    cambio = true;
 		  }	 
 		  if(cambio) setSize(ancho,alto);
+
 	}
 	
 	private void mostrarNuevaMatriz(){
@@ -73,12 +72,11 @@ public class InterfazMatematicas extends JFrame{
 	}
 	
 	public void sumar(){
-		
-	// Cambio aqui	if(hiloM==null || !hiloM.isAlive()) {
+		if(hiloM==null || !hiloM.isAlive()) {
 			hiloM = new HiloMatriz(mat, this);
 			hiloM.start();
 		}
-	//}
+	}
 	
 	public void cambiarColor() {
 	}
@@ -93,20 +91,6 @@ public class InterfazMatematicas extends JFrame{
 	}
 	
 	public void cargar(){
-		try {
-			mat.cargar();
-			mostrarNuevaMatriz();
-			JOptionPane.showMessageDialog(this, "Se cargo exitosamente el archivo: \n " + Matematica.NOMBRE_ULTIMA_MATRIZ);
-		}
-		catch(FileNotFoundException e) {
-			JOptionPane.showMessageDialog(this, "El archivo " +Matematica.NOMBRE_ULTIMA_MATRIZ + " "+ "no existe" );
-			e.printStackTrace();
-		}
-	
-		catch(IOException e) {
-			JOptionPane.showMessageDialog(this, "Se encontraron problemas cargando el archivo" +Matematica.NOMBRE_ULTIMA_MATRIZ);
-			e.printStackTrace();
-		}
 	}
 	
 	public void guardar(){
