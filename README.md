@@ -1,5 +1,4 @@
 # MatricesDidacticas
-Group 2
 
 This project was developed inside the AED course from ICESI University. 
 The objective of this project is to create an animated matrix with the dimensions entered by the user.
