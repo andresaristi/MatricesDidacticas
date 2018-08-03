@@ -55,6 +55,7 @@ public class Matematica {
 	public void guardar() throws IOException{
 	}
 	
+
 	public void cargar() throws FileNotFoundException,IOException{
 		Scanner lector  = new Scanner (new FileReader(NOMBRE_ULTIMA_MATRIZ));
 		int f = lector.nextInt();
@@ -66,6 +67,5 @@ public class Matematica {
 			}
 		}
 		lector.close();
-		
-	}
+      }
 }
