@@ -36,7 +36,6 @@ public class PanelMatriz extends JPanel implements MouseListener{
 				if(matrizDidactica[i][j].darEstado()==Casilla.ESTADO_NORMAL){
 
 					g.setColor(new Color(240, 240,240));
-
 				}else{
 					g.setColor(Color.PINK);
 				}
@@ -81,5 +80,7 @@ public class PanelMatriz extends JPanel implements MouseListener{
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
-	}	
+	}
+
+		
 }
