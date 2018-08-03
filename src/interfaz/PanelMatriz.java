@@ -56,6 +56,12 @@ public class PanelMatriz extends JPanel implements MouseListener{
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		principal.sumar();
+		if(e.getButton()==MouseEvent.BUTTON1){
+			principal.sumar();
+		}else if(e.getButton()==MouseEvent.BUTTON3){
+			principal.cambiarCalculando(false);
+		}
+
 	}
 
 	@Override
