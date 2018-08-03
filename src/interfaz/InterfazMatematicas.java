@@ -53,11 +53,12 @@ public class InterfazMatematicas extends JFrame{
 	}
 	
 	public void sumar(){
-		if(hiloM==null || !hiloM.isAlive()) {
+		
+	// Cambio aqui	if(hiloM==null || !hiloM.isAlive()) {
 			hiloM = new HiloMatriz(mat, this);
 			hiloM.start();
 		}
-	}
+	//}
 	
 	public void cambiarColor() {
 	}
