@@ -34,13 +34,18 @@ public class PanelMatriz extends JPanel implements MouseListener{
 				int x = j*TAMANO_LADO_CASILLA;
 				int y = i*TAMANO_LADO_CASILLA;
 				if(matrizDidactica[i][j].darEstado()==Casilla.ESTADO_NORMAL){
+<<<<<<< HEAD
+					g.setColor(new Color(240, 240,240));
+=======
 					g.setColor(new Color(240,240,240));
+>>>>>>> 19c06430c2ee74c7e0226342cd5f3e8ca395949c
 				}else{
 					g.setColor(Color.PINK);
 				}
 				g.fillRect(x, y, TAMANO_LADO_CASILLA, TAMANO_LADO_CASILLA);
 				g.setColor(Color.RED);
 				g.drawRect(x, y, TAMANO_LADO_CASILLA, TAMANO_LADO_CASILLA);
+				g.setColor(Color.BLACK);
 				g.drawString(matrizDidactica[i][j].darValor()+"", x+TAMANO_LADO_CASILLA/4, y+3*TAMANO_LADO_CASILLA/4);
 			}
 		}
@@ -56,6 +61,12 @@ public class PanelMatriz extends JPanel implements MouseListener{
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		principal.sumar();
+		if(e.getButton()==MouseEvent.BUTTON1){
+			principal.sumar();
+		}else if(e.getButton()==MouseEvent.BUTTON3){
+			principal.cambiarCalculando(false);
+		}
+
 	}
 
 	@Override
